@@ -5,11 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile 
-    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:9001"
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:9167"
     volumes:
       - .:/app
     ports:
-      - "9001:9001"
+      - "9167:9167"
     env_file: 
       - env/.env.stage
   #   depends_on:
